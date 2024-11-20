@@ -4,7 +4,7 @@ import Peces from "../models/peces.models";
 
 export const getPeces = async (req: Request, res: Response) => {
   try {
-    const peces = await Peces.findAll();  // Utilizamos Sequelize para obtener todos los peces
+    const peces = await Peces.findAll();
     res.json(peces);
   } catch (error) {
     res.status(500).json({ error: 'Error al obtener los datos de los peces' });
